@@ -5,29 +5,33 @@
  * @format
  */
 
-import { Button, Pressable, Text, View } from 'react-native';
+import { Button, Pressable, Text, TextInput, View } from 'react-native';
 import Welcome from './src/components/Welcome';
 import First from './src/components/First';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import InputTextField from './src/components/InputTextField';
+import UseStateHook from './src/components/UseStateHook';
+import Props from './src/components/Props';
 
 const App = () => {
-  const name = 'Samad';
-  const getAge = (a: any) => {
-    return a;
-  };
+  // const name = 'Samad';
+  // const getAge = (a: any) => {
+  //   return a;
+  // };
 
-  const handlePress = () => {
-    console.warn('Hello Samad');
-  };
+  // const handlePress = () => {
+  //   console.warn('Hello Samad');
+  // };
 
   return (
-    <View style={{ margin: 16 }}>
-      <Text>Hello World!</Text>
+    <SafeAreaView>
+      <View>
+        {/* <Text>Hello World!</Text>
       <First />
       <Welcome />
       <Text>{name}</Text>
       <Text>{getAge(23)}</Text>
       <Button title="click" onPress={() => handlePress} />
-
       <Pressable
         onPress={handlePress}
         style={{
@@ -39,8 +43,13 @@ const App = () => {
         }}
       >
         <Text style={{ fontSize: 14, fontWeight: '700' }}>Login</Text>
-      </Pressable>
-    </View>
+      </Pressable> */}
+
+        <InputTextField />
+        {/* <UseStateHook /> */}
+        {/* <Props /> */}
+      </View>
+    </SafeAreaView>
   );
 };
 
